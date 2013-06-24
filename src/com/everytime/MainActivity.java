@@ -1,7 +1,6 @@
 package com.everytime;
 
 import com.phonegap.DroidGap;
-
 import android.os.Bundle;
 
 public class MainActivity extends DroidGap {
