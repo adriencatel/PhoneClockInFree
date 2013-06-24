@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        id        = "com.everytime.PhoneClockInFree"
+        version   = "2.0.0">
 
     <!-- versionCode is optional and Android only -->
 
@@ -8,26 +10,73 @@
     <description>
         
     </description>
-
+	
+    <content src="index.html" />
+    
+    <access origin="*"/>
+    
     <author href="https://everytime-technologies.com" email="adrien.catel@everytime-technologies.com">
         Adrien Catel
     </author>
 	
-    <plugin name="App" 				value="com.phonegap.App"/>
-    <plugin name="Geolocation" 		value="com.phonegap.GeoBroker"/>
-    <plugin name="Device" 			value="com.phonegap.Device"/>
-    <plugin name="Accelerometer" 	value="com.phonegap.AccelListener"/>
-    <plugin name="Compass" 			value="com.phonegap.CompassListener"/>
-    <plugin name="Media" 			value="com.phonegap.AudioHandler"/>
-    <plugin name="Camera" 			value="com.phonegap.CameraLauncher"/>
-    <plugin name="Contacts" 		value="com.phonegap.ContactManager"/>
-    <plugin name="Crypto" 			value="com.phonegap.CryptoHandler"/>
-    <plugin name="File" 			value="com.phonegap.FileUtils"/>
-    <plugin name="NetworkStatus" 	value="com.phonegap.NetworkManager"/>
-    <plugin name="Notification" 	value="com.phonegap.Notification"/>
-    <plugin name="Storage" 			value="com.phonegap.Storage"/>
-    <plugin name="Temperature" 		value="com.phonegap.TempListener"/>
-    <plugin name="FileTransfer" 	value="com.phonegap.FileTransfer"/>
-    <plugin name="Capture" 			value="com.phonegap.Capture"/>
+    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
+    
+    <feature name="App">
+      <param name="android-package" value="org.apache.cordova.App"/>
+    </feature>
+    <feature name="Geolocation">
+      <param name="android-package" value="org.apache.cordova.GeoBroker"/>
+    </feature>
+    <feature name="Device">
+      <param name="android-package" value="org.apache.cordova.Device"/>
+    </feature>
+    <feature name="Accelerometer">
+      <param name="android-package" value="org.apache.cordova.AccelListener"/>
+    </feature>
+    <feature name="Compass">
+      <param name="android-package" value="org.apache.cordova.CompassListener"/>
+    </feature>
+    <feature name="Media">
+      <param name="android-package" value="org.apache.cordova.AudioHandler"/>
+    </feature>
+    <feature name="Camera">
+      <param name="android-package" value="org.apache.cordova.CameraLauncher"/>
+    </feature>
+    <feature name="Contacts">
+      <param name="android-package" value="org.apache.cordova.ContactManager"/>
+    </feature>
+    <feature name="File">
+      <param name="android-package" value="org.apache.cordova.FileUtils"/>
+    </feature>
+    <feature name="NetworkStatus">
+      <param name="android-package" value="org.apache.cordova.NetworkManager"/>
+    </feature>
+    <feature name="Notification">
+      <param name="android-package" value="org.apache.cordova.Notification"/>
+    </feature>
+    <feature name="Storage">
+      <param name="android-package" value="org.apache.cordova.Storage"/>
+    </feature>
+    <feature name="FileTransfer">
+      <param name="android-package" value="org.apache.cordova.FileTransfer"/>
+    </feature>
+    <feature name="Capture">
+      <param name="android-package" value="org.apache.cordova.Capture"/>
+    </feature>
+    <feature name="Battery">
+      <param name="android-package" value="org.apache.cordova.BatteryListener"/>
+    </feature>
+    <feature name="SplashScreen">
+      <param name="android-package" value="org.apache.cordova.SplashScreen"/>
+    </feature>
+    <feature name="Echo">
+      <param name="android-package" value="org.apache.cordova.Echo"/>
+    </feature>
+    <feature name="Globalization">
+      <param name="android-package" value="org.apache.cordova.Globalization"/>
+    </feature>
+    <feature name="InAppBrowser">
+      <param name="android-package" value="org.apache.cordova.InAppBrowser"/>
+    </feature>
     
 </widget>

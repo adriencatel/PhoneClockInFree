@@ -2,14 +2,7 @@
 /*                          			GLOBAL / CONSTANTES	                                 		*/
 /****************************************************************************************************/
 var states 					= {};
-states[Connection.UNKNOWN]  = 'Unknown connection';
-states[Connection.ETHERNET] = 'Ethernet connection';
-states[Connection.WIFI]     = 'WiFi connection';
-states[Connection.CELL_2G]  = 'Cell 2G connection';
-states[Connection.CELL_3G]  = 'Cell 3G connection';
-states[Connection.CELL_4G]  = 'Cell 4G connection';
-states[Connection.CELL]     = 'Cell generic connection';
-states[Connection.NONE]     = 'No network connection';
+
 
 function checkCache(){
 	var localStorage 			= new LocalStorage();
@@ -25,6 +18,17 @@ function clearCache(){
 	}
 }
 
+function initVarConnection(){
+	states[Connection.UNKNOWN]  = 'Unknown connection';
+	states[Connection.ETHERNET] = 'Ethernet connection';
+	states[Connection.WIFI]     = 'WiFi connection';
+	states[Connection.CELL_2G]  = 'Cell 2G connection';
+	states[Connection.CELL_3G]  = 'Cell 3G connection';
+	states[Connection.CELL_4G]  = 'Cell 4G connection';
+	states[Connection.CELL]     = 'Cell generic connection';
+	states[Connection.NONE]     = 'No network connection';
+}
+
 /****************************************************************************************************/
 /*                          			GLOBAL / CONSTANTES	                                 		*/
 /****************************************************************************************************/
@@ -36,6 +40,7 @@ $(document).ready(function() {
 function onDeviceReady() {
     $.support.cors = true;
     
+    initVarConnection();
     generateArbo();
     ResizeRefreshPositionsElements();
 	console.log("**Device [OK]");
@@ -126,7 +131,7 @@ function GetInstitutionNameByExternalId() {
 		        dataType	: 'jsonp',			// allow cross-Domain
 		        url			: config.getUrl() + "?callback=?",
 		        jsonp		: 'successGetInstitutionNameByExternalId',
-		        timeout		: 3000,
+		        timeout		: 5000,
 		        data		: 'idExternal=' + config.getExternalId() + '&action=GetInstitutionNameByExternalId',
 		        success		: function(success){
 		        	successGetInstitutionNameByExternalId(success);
@@ -171,7 +176,7 @@ function TrySendNewClockInMovement(date){
 		        dataType	: 'jsonp',			// allow cross-Domain
 		        url			: config.getUrl() + "?callback=?",
 		        jsonp		: 'successTrySendNewClockInMovement',
-		        timeout		: 3000,
+		        timeout		: 5000,
 		        data		: 'idExternal=' + config.getExternalId() + '&badge=' + config.getBadge() + '&clockInDateTime=' + dateSend + '&action=TrySendNewClockInMovement',
 		        success		: function(success){
 		        	successTrySendNewClockInMovement(success);
@@ -204,6 +209,7 @@ function errorMessage(jqXHR, textStatus, errorThrown) {
 	console.log("Error [errorThrown] : " + errorThrown);
 	var localStorage 			= new LocalStorage();
 	if(textStatus != "parsererror"){
+		$('#divDebug').html($('#divDebug').html() + "<span style=\"color:Red;\">--> " + textStatus + " </span><br/>"); 
 		$('#divDebug').html($('#divDebug').html() + "<span style=\"color:Red;\">--> Envoi NON OK </span><br/>"); 
 		localStorage.newEventCache();
 	}
