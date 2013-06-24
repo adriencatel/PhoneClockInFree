@@ -4,8 +4,8 @@ div#divDebug {
    position		: absolute;
    height		: 200px;
    /*background	: #ccc;*/
-   /*color		: white;*/
-   border		: solid 1px black;
+   /*color		: white;
+   border		: solid 1px black;*/
 }
 
 html, body{

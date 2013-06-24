@@ -111,7 +111,7 @@ function GetInstitutionNameByExternalId() {
 	$('#divDebug').html("<span style=\"color:Blue;\">****GetInstitutionNameByExternalId****</span><br/>");
 	if(connectionIsAvailable())
 	{
-		$('#divDebug').html("<span style=\"color:Green;\">--> Connexion OK </span><br/>"); 
+		$('#divDebug').html($('#divDebug').html() + "<span style=\"color:Green;\">--> Connexion OK </span><br/>"); 
 		config = getConfig();		
 		if(config != null){
 			$('#divDebug').html($('#divDebug').html() + "<span style=\"color:Green;\">--> Configuration OK </span><br/>");
@@ -147,7 +147,7 @@ function TrySendNewClockInMovement(date){
 	var localStorage 			= new LocalStorage();
 	if(connectionIsAvailable())
 	{
-		$('#divDebug').html("<span style=\"color:Green;\">--> Connexion OK </span><br/>"); 
+		$('#divDebug').html($('#divDebug').html() + "<span style=\"color:Green;\">--> Connexion OK </span><br/>"); 
 		config = getConfig();		
 		if(config != null){
 			$('#divDebug').html($('#divDebug').html() + "<span style=\"color:Green;\">--> Configuration OK </span><br/>"); 
