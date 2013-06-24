@@ -108,6 +108,7 @@ function sendCache(){
 /****************************************************************************************************/
 /*------------------------METHODES------------------------*/
 function GetInstitutionNameByExternalId() {
+	$('#divDebug').html("<span style=\"color:Blue;\">****GetInstitutionNameByExternalId****</span><br/>");
 	if(connectionIsAvailable())
 	{
 		$('#divDebug').html("<span style=\"color:Green;\">--> Connexion OK </span><br/>"); 
@@ -125,7 +126,7 @@ function GetInstitutionNameByExternalId() {
 		        dataType	: 'jsonp',			// allow cross-Domain
 		        url			: config.getUrl() + "?callback=?",
 		        jsonp		: 'successGetInstitutionNameByExternalId',
-		        //timeout		: 3000,
+		        timeout		: 3000,
 		        data		: 'idExternal=' + config.getExternalId() + '&action=GetInstitutionNameByExternalId',
 		        success		: function(success){
 		        	successGetInstitutionNameByExternalId(success);
@@ -142,6 +143,7 @@ function GetInstitutionNameByExternalId() {
 }
 
 function TrySendNewClockInMovement(date){
+	$('#divDebug').html("<span style=\"color:Blue;\">****TrySendNewClockInMovement****</span><br/>");
 	var localStorage 			= new LocalStorage();
 	if(connectionIsAvailable())
 	{
@@ -169,7 +171,7 @@ function TrySendNewClockInMovement(date){
 		        dataType	: 'jsonp',			// allow cross-Domain
 		        url			: config.getUrl() + "?callback=?",
 		        jsonp		: 'successTrySendNewClockInMovement',
-		        //timeout		: 3000,
+		        timeout		: 3000,
 		        data		: 'idExternal=' + config.getExternalId() + '&badge=' + config.getBadge() + '&clockInDateTime=' + dateSend + '&action=TrySendNewClockInMovement',
 		        success		: function(success){
 		        	successTrySendNewClockInMovement(success);
