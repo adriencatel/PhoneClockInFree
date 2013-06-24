@@ -19,8 +19,6 @@
         Adrien Catel
     </author>
 	
-    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
-    
     <feature name="App">
       <param name="android-package" value="org.apache.cordova.App"/>
     </feature>
