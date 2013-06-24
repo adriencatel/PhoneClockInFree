@@ -50,7 +50,7 @@ function onOffline() {
 }
 
 function checkConnection() {
-    var networkState 			= navigator.network.connection.type;
+    var networkState 			= navigator.network.type;//navigator.network.connection.type;
     return states[networkState];
 }
 
