@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <title>First Phone Gap Page</title>
+	    
+	    <script type="text/javascript" 	charset="utf-8" src="jquery/Jquery-1.10.1.js"></script>
+	    <script type="text/javascript" 	charset="utf-8" src="phonegap-1.4.1.js"></script>
+	    
+	    <script type="text/javascript" 	charset="utf-8" src="apis/DataConfig.js"></script>
+	    <script type="text/javascript" 	charset="utf-8" src="apis/File.js"></script>
+	    <script type="text/javascript" 	charset="utf-8" src="apis/LocalStorage.js"></script>
+	    <script type="text/javascript" 	charset="utf-8" src="index.js"></script>
+	    
+	    <link 	type="text/css" 		charset="utf-8"	href="index.css" rel="stylesheet" />
+	</head>
+	<body id="mainBody">
+		<form action="" style="Position:relative;">
+			<h1>Step 1 :</h1><br/>
+			<input 	value="Generate Arbo" type="button" 	onclick="generateArbo()"/>
+		    <br/>
+		    <h1>Step 2 :</h1><br/>
+		    url : <input id="url" 		type="text" 	style="width:200px;" value="" alt=""/><br/>
+		    id : <input id="id" 		type="text" 	style="width:200px;" value="" alt=""/><br/>
+		    badge : <input id="badge" 	type="text" 	style="width:200px;" value="" alt=""/><br/>
+		    <input type="button"   value="New ClockIn"		onclick="TrySendNewClockInMovement(null)"/><br/>
+		    <input type="button"   value="Institution Name"	onclick="GetInstitutionNameByExternalId()"/><br/>
+	    </form>
+	    <div id="divDebug" style="Position:absolute; margin-top:1px; margin-left:1px;"></div>
+	    
+	    <img 	id="imgNotification"	src="Images/notifs.png" 		alt="error loading img" title="1 ou plusieurs pointages sont en cache" 	onclick="sendCache()"/>
+	</body>
+</html>

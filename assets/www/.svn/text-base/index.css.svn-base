@@ -1,0 +1,23 @@
+@CHARSET "ISO-8859-1";
+
+div#debug {
+   /* we hide the debug div by default */
+   /*display		: none;*/
+   /*position		: absolute;
+   top			: 10px;
+   right		: 10px;
+   padding		: 10px;
+   width		: 300px;*/
+   height		: 200px;
+   background	: #ccc;
+   color		: white;
+   border		: solid 1px black;
+}
+
+html, body{
+	padding				: 0px 0px 0px 0px !important;
+	margin				: 0px 0px 0px 0px !important;
+	height				: 100% !important;
+	width				: 100% !important; 
+	background-color	: white;  
+}

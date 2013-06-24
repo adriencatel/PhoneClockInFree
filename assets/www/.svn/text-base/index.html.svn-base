@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <title>First Phone Gap Page</title>
+	    
+	    <script type="text/javascript" 	charset="utf-8" src="jquery/Jquery-1.10.1.js"></script>
+	    <script type="text/javascript" 	charset="utf-8" src="phonegap-1.4.1.js"></script>
+	    
+	    <!--  <script type="text/javascript" 	charset="utf-8" src="apis/Debug.js"></script> -->
+	    <script type="text/javascript" 	charset="utf-8" src="apis/DataConfig.js"></script>
+	    <script type="text/javascript" 	charset="utf-8" src="apis/File.js"></script>
+	    <script type="text/javascript" 	charset="utf-8" src="apis/LocalStorage.js"></script>
+	    <script type="text/javascript" 	charset="utf-8" src="index.js"></script>
+	    
+	    <link 	type="text/css" 		charset="utf-8"	href="index.css" rel="stylesheet" />
+	</head>
+	<body id="mainBody">
+	    <!--<br/>
+	    <input type="button" value="1 : Generate Arbo" 								onclick="generateArbo()" /><br/>    
+	    <!--<input type="button" value="2 : Generate Config" 							onclick="generateConfig()" /><br/> -->
+	    <!--<input type="button" value="2 : Check Institution Name By External Id" 		onclick="GetInstitutionNameByExternalId()" /><br/><br/>
+	    <input type="button" value="3 : Try new Clock In" 							onclick="TrySendNewClockInMovement(null)" /><br/><br/>
+	    <!--<input type="button" value="Check Connection" 								onclick="toto()" /><br/>-->
+	    <!--<input type="button" value="Check Config (debug)" 							onclick="checkConfig()" /><br/><br/>
+	    <input type="button" value="Check Cache (debug)" 							onclick="checkCache()" /><br/>
+	    <input type="button" value="Clear Cache (debug)" 							onclick="clearCache()" /><br/>
+	    <!-- <div id="debug"></div>  -->
+	    
+	    <!--<input 	type="button" 			value="Check Cache (debug)" 	onclick="checkCache()"/>
+	    <input 	type="button" 			value="Clear Cache (debug)" 	onclick="clearCache()"/>-->
+
+	    <div id="divDebug" style="Position:absolute; margin-top:1px; margin-left:1px;"></div>
+	    
+	    <img 	id="imgClockIn" 		src="Images/goIn_slider.png" 	alt="error loading img" title="Pointez !" 								onclick="TrySendNewClockInMovement(null)"/>
+	    <img 	id="imgNotification"	src="Images/notifs.png" 		alt="error loading img" title="1 ou plusieurs pointages sont en cache" 	onclick="sendCache()"/>
+	</body>
+</html>
