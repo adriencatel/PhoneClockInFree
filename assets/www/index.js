@@ -3,7 +3,6 @@
 /****************************************************************************************************/
 var states 					= {};
 
-
 function checkCache(){
 	var localStorage 			= new LocalStorage();
 	if(localStorage != null){
